@@ -8,7 +8,6 @@ RUN yum --disableplugin=subscription-manager install java-17-openjdk -y \
     && yum --disableplugin=subscription-manager update -y \
     && yum --disableplugin=subscription-manager clean all
 
-ADD app-src /tmp/src
 RUN chown -R 1001:0 /tmp/src
 RUN chmod -R 777 /run/httpd
 USER 1001
